@@ -1,0 +1,95 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+
+
+<style>
+	
+		  
+	 @font-face{
+  font-family:"AmnestyTradeGothicW04BdCnNo-20";
+  src:url("fonts/AmnestyTradeGothicW04BdCnNo-20.eot?#iefix");
+  src:url("fonts/AmnestyTradeGothicW04BdCnNo-20.eot?#iefix") format("eot"),url("fonts/AmnestyTradeGothicW04BdCnNo-20.woff") format("woff"),url("fonts/AmnestyTradeGothicW04BdCnNo-20.ttf") format("truetype"),url("fonts/AmnestyTradeGothicW04BdCnNo-20.svg#AmnestyTradeGothicW04BdCnNo-20") format("svg");
+}
+	  
+	html, body {
+		background-color: #a1a1a1;
+		padding-top:20px;
+	}
+	
+	
+p {
+  text-align: center;
+  font-size: 40px;
+  margin-top:0px;
+	font-family:  AmnestyTradeGothicW04BdCnNo-20;
+	max-width:600px;
+	margin: 0 auto;
+		
+}
+	
+	.clock {	
+		font-size:5.2em;
+		color: #000;
+		
+		
+	}
+	
+	.container {
+		width:100%;
+	}
+	
+	
+</style>
+
+
+
+
+</head>
+<body>
+
+<div class="container">
+
+<p><span style="font-size:20px;">BASED ON 2017 RECORDED DATA eseseseseseses</span><br/>
+	ON AVERAGE 1 EXECUTION TAKES PLACE EVERY 9 HOURSeseseseseseseseses</span></p> <br />
+	
+<p id="demo" class="clock"></p>
+
+
+<p><span style="font-size:14px">This excludes China where executions were believed to be in the thousands</span></p>
+</div>
+
+<script>
+// Set the date we're counting down to
+var countDownDate = new Date().getTime()+9*3600*1000;
+// Update the count down every 1 second
+var x = setInterval(function() {
+    // Get todays date and time
+    var now = new Date().getTime();
+    
+    // Find the distance between now an the count down date
+    var distance = countDownDate - now;
+    
+    // Time calculations for days, hours, minutes and seconds
+    var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+    var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+    var seconds = Math.floor((distance % (1000 * 60)) / 1000) ;
+    
+    // Output the result in an element with id="demo"
+    document.getElementById("demo").innerHTML = "0"+hours + ":"
+    + minutes + ":" + seconds;
+    
+    // If the count down is over, write some text 
+    if (distance < 0) {
+        clearInterval(x);
+        document.getElementById("demo").innerHTML = "EXPIRED";
+    }
+}, 1000);
+</script>
+
+</body>
+</html>
